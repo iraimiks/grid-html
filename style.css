@@ -1,0 +1,126 @@
+h2 {
+  color: aquamarine;
+}
+
+.parent-grid {
+  display: grid;
+}
+
+.item {
+  border: 1px solid red;
+  margin: 5px;
+}
+
+.parent-grid-rows {
+  display: grid;
+  grid-template-columns: repeat(3, 2fr);
+  grid-template-rows: 1fr 1fr;
+}
+
+/* Grid system */
+
+.container {
+  position: relative;
+  display: grid;
+  grid-template-columns: 0.4fr 1.6fr;
+  grid-template-rows: 0.5fr 2fr 0.5fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "header header"
+    "left content"
+    "footer footer";
+}
+
+.header { 
+  grid-area: header;
+  border: 1px solid red;
+}
+
+.left { 
+  grid-area: left; 
+  border: 1px solid red;
+}
+
+.content { 
+  grid-area: content; 
+  border: 1px solid red;
+  height: 140px;
+  overflow: scroll;
+}
+
+.footer { 
+  grid-area: footer; 
+  border: 1px solid red;
+}
+
+/* Flex system */
+.flex-container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navigation */
+
+nav {
+  display: flex;
+  flex-direction: row;
+}
+
+.nav-item {
+  background-color: aqua;
+  margin: 0 10px 0 0;
+}
+
+/* Position of elements */
+.style-position {
+  position: absolute;
+  top: 15%;
+  font-size: 50px;
+  color: rgb(255, 255, 255);
+}
+
+.position-btn {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+}
+
+
+.z-container {
+  position: relative;
+}
+
+.block-1 {
+  position: relative;
+  background-color: antiquewhite;
+  z-index: -9999999;
+  border: 1px solid black;
+  height: 150px;
+  margin: 30px;
+}
+
+.block-2 {
+  position: absolute;
+  z-index: 6666666;
+  left: 400px;
+  top: 15px;
+  width: 20%;
+  height: 50px;
+  background-color: rgb(224, 127, 8);
+}
+
+.block-3 {
+  position: absolute;
+  z-index: 6666667;
+  left: 380px;
+  top: 10px;
+  width: 20%;
+  height: 50px;
+  background-color: rgb(167, 122, 68);
+}
+
+.overflow-style {
+  height: 140px;
+  overflow: scroll;
+}
